@@ -19,45 +19,56 @@
 
   <!-- hasta aca llega mi header -->
   <body>
-    <nav>
-      <div>
-        <a href=""></a>
-        <span> Navel Pondering Mantra</span>
+    <nav class="navbar">
+      <div class="topLeft">
+        <a href="" class="heart">♥︎</a>
+        <span class="acronym">Navel Pondering Mantra</span>
       </div>
       <div>
-        <ul>
-          <li><a href="#">dummy</a></li>
-          <li><a href="#">dummy</a></li>
-          <li><a href="#">dummy</a></li>
-          <li><a href="#">dummy</a></li>
-          <li><a href="#">dummy</a></li>
+        <ul class="topLinks">
+          <li><a href="#">npm Enterprise</a></li>
+          <li><a href="#">features</a></li>
+          <li><a href="#">pricing</a></li>
+          <li><a href="#">documentation</a></li>
+          <li><a href="#">support</a></li>
         </ul>
       </div>
     </nav>
     <!-- este es el fin de la nav  -->
-    <head>
-      <div>
-        <!-- este es el padre de todos head -->
-        <div>
-          <img src="" alt="logo npm" />
+    <header id="signUp" style="background-image: url('images/city-scape.svg')">
+      <div class="searchRow">
+        <div class="logo">
+          <img src="images/npm-logo.png" alt="npm logo" />
         </div>
-        <div>
+
+        <div class="searchBar">
           <form action="">
-            <!-- es una manera de comunicacion entre front y  back o api  -->
             <input type="text" placeholder="find packages" name="search" />
-            <button>
-              <i class="fa fa-search"></i>
-            </button>
+            <button type="submit"><i class="fa fa-search"></i></button>
           </form>
         </div>
-        <!-- separa la forma -->
-        <div>
+
+        <div class="login">
           <span><a href="#">sign up</a> or <a href="#">Log in</a></span>
           <figure>
-            <img src="" alt="osito" />
+            <img src="images/bear-logo.png" width="30" alt="" />
           </figure>
         </div>
       </div>
-    </head>
+
+      <div class="container">
+        <div class="splitContent">
+          <div class="headerContent">
+            <h1>Build amazing things</h1>
+            <p class="white">
+              npm is the package manager for JavaScript and the world's largest
+              software registry. Discover packages of reusable code -- and
+              assemble them in powerful new ways.
+            </p>
+            <button class="m-top-sm">Sign up for npm</button>
+          </div>
+        </div>
+      </div>
+    </header>
   </body>
 </html>

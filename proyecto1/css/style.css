@@ -1,6 +1,162 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-
-a {
-  color: green;
+/* General */
+body {
+  margin: 0px;
   font-family: "Roboto", sans-serif;
+  margin: 0 auto;
+}
+figure {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+a:hover {
+  color: #ffcd05;
+  transition: 0.4s;
+}
+.container {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 3rem 0 5rem 0;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.white {
+  color: #ffffff;
+}
+button {
+  border-radius: 30px;
+  padding: 10px 24px;
+  color: #ffffff;
+  background-color: rgb(240, 146, 51);
+  border: none;
+  font-size: 0.9em;
+}
+button:hover {
+  box-shadow: 0px 2px 11px 4px rgba(0, 0, 0, 0.2);
+}
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 1em;
+  color: #ffffff;
+  font-weight: lighter;
+}
+.m-top-sm {
+  margin-top: 20px;
+}
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #ffffff;
+}
+h1 {
+  font-weight: normal;
+  font-size: 2.5em;
+}
+h2 {
+  font-weight: lighter;
+  font-size: 2em;
+}
+/* Navigation */
+.navbar {
+  background-color: #c12127;
+  color: rgba(255, 255, 255, 0.8);
+  height: 60px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+.navbar a {
+  color: rgba(255, 255, 255, 0.6);
+}
+.navbar a:hover {
+  color: rgba(255, 255, 255, 1);
+  transform: 0.2s;
+}
+.topLinks {
+  display: inline-block;
+  padding: 0;
+  margin: 0 20px 0 0;
+}
+.topLinks li {
+  display: inline-block;
+  margin: 0 10px;
+}
+/* Header section */
+header {
+  background-color: rgb(32, 89, 122);
+}
+.searchRow {
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
+  width: inherit;
+  align-items: center;
+  padding: 10px 50px;
+}
+.logo {
+  width: 10%;
+}
+.logo img {
+  width: 100%;
+  float: left;
+  padding: 5px;
+}
+.searchBar {
+  width: 75%;
+  display: inherit;
+  flex-wrap: inherit;
+  align-items: center;
+  padding: 0 1%;
+}
+.searchBar form {
+  width: 100%;
+  margin: 0 auto;
+  justify-content: space-between;
+  display: inherit;
+  flex: inherit;
+}
+.searchBar button {
+  background-color: rgb(31, 82, 111);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 10px;
+  color: rgba(255, 255, 255, 1);
+  border-radius: 0;
+  font-size: 0.9em;
+}
+.searchBar input {
+  width: 95%;
+  background-color: rgb(31, 82, 111);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 15px;
+}
+.login {
+  width: 15%;
+  display: inherit;
+  flex-wrap: inherit;
+  align-items: center;
+}
+.headerContent {
+  width: 50%;
+}
+.splitContent {
+  display: flex;
+}
+.cityScape {
+  display: inherit;
+  width: 50%;
+}
+.cityScape img {
+  width: 100%;
 }
