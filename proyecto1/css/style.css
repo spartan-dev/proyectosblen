@@ -66,6 +66,21 @@ h2 {
   font-weight: lighter;
   font-size: 2em;
 }
+
+/* medias queries  */
+
+@media only screen and (min-width: 640px) {
+  .searchRow {
+    color: red;
+    display: none;
+  }
+}
+
+@media (min-width: 780px) {
+}
+@media (min-width: 1080) {
+}
+
 /* Navigation */
 .navbar {
   background-color: #c12127;
@@ -153,10 +168,42 @@ header {
 .splitContent {
   display: flex;
 }
-.cityScape {
-  display: inherit;
+/*  org container section  */
+.orgs {
+  background-color: rgb(39, 53, 71);
+}
+.orgs figure {
+  padding: 3em 0;
+}
+.orgsContent {
+  position: absolute;
+  right: 0;
   width: 50%;
 }
-.cityScape img {
-  width: 100%;
+.orgsContent h2 {
+  width: 70%;
+}
+.learnMore {
+  color: #ffffff;
+  font-size: 0.7em;
+}
+.learnMore {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.orgs button {
+  background-color: rgb(203, 56, 55);
+  font-size: 0.9em;
+}
+
+.whatIsNpm {
+  background-size: cover;
+  background-image: url("images/forklift.svg");
+  position: relative;
+}
+.whatIsNpmContent {
+  width: 50%;
+}
+.whatIsNpm button {
+  background-color: rgb(49, 68, 88);
 }

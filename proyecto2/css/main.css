@@ -1,0 +1,48 @@
+/*
+Colors:
+Text: 1A1A1A
+Green: #00B172
+White: #FFF
+*/
+
+/* General Styles */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+}
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+h1 {
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 3.4em;
+  margin-bottom: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  border-bottom: 2px solid #414141;
+  transition: 1s;
+}
+
+/* Menu aca para comenzar */
