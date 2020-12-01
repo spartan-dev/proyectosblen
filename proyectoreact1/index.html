@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+    <title>React for spartans</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script type="text/babel">
+      //esto se le llama un componente JSX
+      class App extends React.Component {
+        state = {
+          nombre: "kain",
+          apellido: "granados",
+          gustos: ["musica", "rock", "beber mucho"],
+        };
+        handleChange(e) {
+          console.log(e.target.value);
+          this.setState({ nombre: e.target.value });
+        }
+
+        handleSubmit = (e) => {
+          //return implicito
+          e.preventDefault();
+          console.log(this.state);
+          //llamaria a nuestro back
+        };
+        handleClick = () => {
+          alert("adios bros");
+        };
+        render() {
+          return (
+            <div>
+              <h1>
+                Hola Blendeds!!! mi nombre es {this.state.nombre} no nos hacemos
+                render
+              </h1>
+              <form action="" onSubmit={this.handleSubmit}>
+                <input type="text" onChange={(e) => this.handleChange(e)} />
+                <button type="submit">puchale aqui man!!!</button>
+              </form>
+              <button onClick={this.handleClick}>dale para decir adios</button>
+              <Section />
+              <Footer />
+            </div>
+          );
+        }
+      }
+
+      class Section extends React.Component {
+        render() {
+          return (
+            <div>
+              <section>
+                <ul>
+                  <li>blen</li>
+                  <li>nada</li>
+                  <li>leonidas</li>
+                  <li>memoria</li>
+                  <li>fiesta</li>
+                </ul>
+              </section>
+            </div>
+          );
+        }
+      }
+
+      const Footer = (parms) => {
+        return (
+          <div>
+            <footer>
+              <section>
+                <div>estamos en el foter y cerramos la app</div>
+              </section>
+            </footer>
+          </div>
+        );
+      };
+      ReactDOM.render(<App />, document.getElementById("app"));
+    </script>
+  </body>
+</html>
