@@ -2,7 +2,8 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import Home from "./components/home";
 import About from "./components/about";
-const Routes = () => {
+import Movie from "./components/movie";
+const Routes = () => (
   <Switch>
     <Route exact path="/">
       <Home />
@@ -10,7 +11,8 @@ const Routes = () => {
     <Route exact path="/about">
       <About />
     </Route>
-  </Switch>;
-};
+    <Route exact path="/movie/:id" component={Movie} />
+  </Switch>
+);
 
 export default Routes;

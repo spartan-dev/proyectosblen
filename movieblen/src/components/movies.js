@@ -1,9 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 const IMGPATH = "https://image.tmdb.org/t/p/w1280";
 
-const Movie = ({ title, overview, poster_path, vote_average }) => {
+const Movie = ({ title, overview, poster_path, vote_average, id }) => {
   const votacion = (vote) => {
-    console.log(vote);
     if (vote >= 8) {
       return "green";
     } else if (vote >= 6) {
@@ -22,6 +22,11 @@ const Movie = ({ title, overview, poster_path, vote_average }) => {
       <div className="overview">
         <h2>Overview:</h2>
         <p>{overview}</p>
+        <div>
+          <Link to={`/movie/${id}`}>
+            <h3>{title}</h3>
+          </Link>
+        </div>
       </div>
     </div>
   );
