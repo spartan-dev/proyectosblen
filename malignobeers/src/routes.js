@@ -7,9 +7,6 @@ import RandomBeer from "./components/random";
 const Router = () => (
   <Switch>
     <Route exact path="/">
-      <div>hola soy la entrada</div>
-    </Route>
-    <Route exact path="/home">
       <Home />
     </Route>
     <Route exact path="/allbeers">

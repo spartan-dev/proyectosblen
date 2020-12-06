@@ -28,27 +28,50 @@ const Nav = () => {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="menu"
-          >
-            <MenuIcon />
-          </IconButton>
-          <Link to="/allbeers">
+          <Link to="/">
+            <IconButton
+              edge="start"
+              className={classes.menuButton}
+              color="inherit"
+              aria-label="menu"
+            >
+              <MenuIcon />
+            </IconButton>
+          </Link>
+
+          <Link style={{ color: "white" }} to="/allbeers">
             <Button color="inherit">
               <Typography variant="h6" className={classes.title}>
                 AllBeers
               </Typography>
             </Button>
           </Link>
-          <Typography variant="h6" className={classes.title}>
-            Random Beer
-          </Typography>{" "}
-          <Typography variant="h6" className={classes.title}>
-            One beer
-          </Typography>
+          <Link style={{ color: "white" }} to="/randombeer">
+            <Button color="inherit">
+              <Typography variant="h6" className={classes.title}>
+                Random
+              </Typography>
+            </Button>
+          </Link>
+          <Link style={{ color: "white" }} to="/onebeer">
+            <Button color="inherit">
+              <Typography variant="h6" className={classes.title}>
+                One Beer
+              </Typography>
+            </Button>
+          </Link>
+          <a
+            target="_blank"
+            href="https://www.youtube.com/watch?v=yzcEG_JoVuo"
+            style={{ color: "white" }}
+            to="/allbeers"
+          >
+            <Button color="inherit">
+              <Typography variant="h6" className={classes.title}>
+                Rolota de chela #ebrios
+              </Typography>
+            </Button>
+          </a>
         </Toolbar>
       </AppBar>
     </div>
