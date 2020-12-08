@@ -20,7 +20,7 @@ const useStyles = makeStyles({
   },
 });
 
-const BeerCard = ({ title, description, linktitle, link }) => {
+const BeerCard = ({ title, description, linktitle, link, image }) => {
   const classes = useStyles();
 
   return (
@@ -28,7 +28,11 @@ const BeerCard = ({ title, description, linktitle, link }) => {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="https://assets.visitmilwaukee.org/visitmke/media/global/Partner%20Images/Gallery%20Size/VM-ThirdSpaceBrewing-Beers.jpg?ext=.jpg&mode=crop&width=1920&height=1080&scale=both"
+          image={
+            image
+              ? image
+              : "https://assets.visitmilwaukee.org/visitmke/media/global/Partner%20Images/Gallery%20Size/VM-ThirdSpaceBrewing-Beers.jpg?ext=.jpg&mode=crop&width=1920&height=1080&scale=both"
+          }
           title="Contemplative Reptile"
         />
         <CardContent>

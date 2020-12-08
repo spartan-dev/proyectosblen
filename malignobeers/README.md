@@ -31,3 +31,5 @@ componentes de mnaterial ui [https://material-ui.com/es/](https://material-ui.co
 dentro del src crear routescon sus componnetes y modificar el index
 
 ##
+
+yarn add firebase reactfire@next

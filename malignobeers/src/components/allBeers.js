@@ -11,6 +11,7 @@ const AllBeers = () => {
     //llama a la funcion en cuento garga el componente
     getBeers();
   }, []);
+
   const getBeers = async () => {
     const call = await fetch("https://api.punkapi.com/v2/beers ");
     const data = await call.json();
@@ -31,7 +32,7 @@ const AllBeers = () => {
         <Textos texto="All Beers for you" tamVar="h1" espacio={true} />
         <Textos
           texto="Una fina seleccion de la api de punk api der chelas para que umo se vuelva mas borracho"
-          tamVar="body2"
+          tamVar="body1"
           espacio={true}
         />
       </div>
@@ -55,6 +56,7 @@ const AllBeers = () => {
                 title={beer.name}
                 description={beer.description}
                 linktitle={beer.first_brewed}
+                image={beer.image_url}
               />
             ))
           )}

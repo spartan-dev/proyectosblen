@@ -5,11 +5,16 @@ import App from "./App";
 import "fontsource-roboto";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
+import firebaseConfig from "./firebase-config";
+import { FirebaseAppProvider } from "reactfire";
+
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <FirebaseAppProvider firebaseConfig={firebaseConfig}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </FirebaseAppProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
