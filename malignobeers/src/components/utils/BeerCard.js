@@ -20,7 +20,7 @@ const useStyles = makeStyles({
   },
 });
 
-const BeerCard = ({ title, description, linktitle, link, image }) => {
+const BeerCard = ({ title, description, linktitle, link, image, id }) => {
   const classes = useStyles();
 
   return (
@@ -45,7 +45,7 @@ const BeerCard = ({ title, description, linktitle, link, image }) => {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Link to={link}>
+        <Link to={link ? link : `/detail/${id}`}>
           <Button size="small" color="primary">
             {linktitle}
           </Button>

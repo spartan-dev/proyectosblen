@@ -53,9 +53,10 @@ const AllBeers = () => {
             beers.map((beer, idx) => (
               <BeerCard
                 key={idx}
+                id={beer.id}
                 title={beer.name}
                 description={beer.description}
-                linktitle={beer.first_brewed}
+                linktitle={beer.name}
                 image={beer.image_url}
               />
             ))
