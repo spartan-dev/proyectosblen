@@ -17,21 +17,21 @@ const Home = () => {
         }}
       >
         <BeerCard
-          title="AllBeers"
-          description="Consulta todas las chelas y ve las marcas"
-          linktitle="Vea a todas las chelas"
+          nombre="AllBeers"
+          descripcion="Consulta todas las chelas y ve las marcas"
+          nombre="Vea a todas las chelas"
           link="/allbeers"
         />
         <BeerCard
-          title="Random Beer"
-          description="dale click al boton y recibe una chela random"
-          linktitle="random beer"
+          nombre="Random Beer"
+          descripcion="dale click al boton y recibe una chela random"
+          nombre="random beer"
           link="/randombeer"
         />
         <BeerCard
-          title="One Beer"
-          description="Dale click y ve por una chela"
-          linktitle="una sola chela"
+          nombre="One Beer"
+          descripcion="crea tu chela"
+          nombre="crear una cerveza"
           link="/onebeer"
         />
       </div>

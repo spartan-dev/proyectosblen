@@ -1,0 +1,48 @@
+{
+  "beers": [
+    {
+      "nombre": "victoria",
+      "tipo": "viena",
+      "mezcla": "no me la se",
+      "maridaje": "con todo",
+      "descripcion": "una chela no comun",
+      "image": "https://k9h2z2w9.stackpathcdn.com/wp-content/uploads/Contemporary-Mexican-Beer-Brands-750x375.jpg",
+      "probada": true,
+      "id": 1
+    },
+    {
+      "nombre": "corona",
+      "tipo": "lager",
+      "mezcla": "ni idea",
+      "maridaje": "con lo que sea",
+      "descripcion": "una chela comun para comer",
+      "image": "https://bodegasalianza.vteximg.com.br/arquivos/ids/164044-800-800/30032-1.jpg?v=636582983081900000",
+      "probada": true,
+      "id": 2
+    },
+    {
+      "nombre": "Jabali",
+      "tipo": "stout",
+      "mezcla": "lupulos y trigo",
+      "maridaje": "pizza",
+      "descripcion": "Una artesanal peque",
+      "image": "https://bodegasalianza.vteximg.com.br/arquivos/ids/164044-800-800/30032-1.jpg?v=636582983081900000",
+      "probada": true,
+      "id": 3
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "kain",
+      "lastname": "maligno",
+      "email": "kain@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Emma",
+      "lastname": "salemm",
+      "email": "salemm@gmail.com"
+    }
+  ]
+}

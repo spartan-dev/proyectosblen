@@ -20,7 +20,17 @@ const useStyles = makeStyles({
   },
 });
 
-const BeerCard = ({ title, description, linktitle, link, image, id }) => {
+const BeerCard = ({
+  nombre,
+  descripcion,
+  maridaje,
+  mezcla,
+  probada,
+  tipo,
+  link,
+  image,
+  id,
+}) => {
   const classes = useStyles();
 
   return (
@@ -37,20 +47,40 @@ const BeerCard = ({ title, description, linktitle, link, image, id }) => {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            {title}
+            {nombre ? <span className="span"> Nombre: {nombre}</span> : null}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            {description}
+            {descripcion ? (
+              <span className="span">Descripcion: {descripcion}</span>
+            ) : null}
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            {maridaje ? (
+              <span className="span">Con que se come? {maridaje}</span>
+            ) : null}
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            {mezcla ? <span className="span">La mezcla: {mezcla}</span> : null}
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            {tipo ? <span className="span">De que tipo es: {tipo}</span> : null}
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            {probada ? (
+              <span className="span">
+                Ya la has probado?{" "}
+                {probada ? "si la he probado" : " no la he probado"}
+              </span>
+            ) : null}
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
-        <Link to={link ? link : `/detail/${id}`}>
-          <Button size="small" color="primary">
-            {linktitle}
-          </Button>
-        </Link>
-      </CardActions>
+      <Link to={link ? link : `/detail/${id}`}>
+        <Button size="large" variant="contained" color="primary">
+          Ver Detalles de {nombre}
+        </Button>
+      </Link>
+      <CardActions></CardActions>
     </Card>
   );
 };

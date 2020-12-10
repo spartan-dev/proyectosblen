@@ -19,7 +19,6 @@ import {
   TextField,
   Link,
 } from "@material-ui/core";
-import dataProyects from "../dataProyects";
 import BeerCard from "./utils/BeerCard";
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -40,15 +39,43 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(3, 0, 2),
   },
 }));
+
 const OneBeer = () => {
   const [form, setForm] = useState({
-    firstName: "",
-    lastName: "",
+    nombre: "",
+    tipo: "",
+    mezcla: "",
+    maridaje: "",
+    descripcion: "",
+    image: "",
+    probada: undefined,
   });
   const classes = useStyles();
+  //crar funcion que recoje los valores del input
   const handleChange = (e) => {
-    const { value, name } = e.target;
-    setForm({ ...form, [name]: value });
+    const { value, name, checked } = e.target;
+    //setea los valores de el form setForm
+    //... spread operator (inmutabilidad)
+    setForm({ ...form, [name]: value || checked }); //trae moño o sii 💀
+    //partre uno dice : traeme lo qe tengas en form y ponlo primero
+    //[name]: value ṕor cada name agregale su value  || = or  check
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const sendBeer = await fetch("http://localhost:4200/beers", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      console.log(sendBeer.status);
+      if (sendBeer.status === 201) {
+        setForm({});
+        document.getElementById("beer-form").reset();
+      }
+    } catch (error) {
+      throw new Error("error", error);
+    }
   };
   return (
     <div>
@@ -57,14 +84,20 @@ const OneBeer = () => {
         <div className={classes.paper}>
           <Avatar className={classes.avatar}></Avatar>
           <Typography component="h1" variant="h5">
-            Sign up
+            Agrega ua chela
           </Typography>
-          <form className={classes.form} noValidate>
+          <form
+            id="beer-form"
+            className={classes.form}
+            noValidate
+            onSubmit={handleSubmit}
+          >
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
                   autoComplete="fname"
-                  name="firstName"
+                  value={form.name}
+                  name="nombre"
                   variant="outlined"
                   required
                   fullWidth
@@ -80,8 +113,8 @@ const OneBeer = () => {
                   required
                   fullWidth
                   id="lastName"
-                  label="Apellido"
-                  name="lastName"
+                  label="Tipo"
+                  name="tipo"
                   autoComplete="lname"
                   onChange={handleChange}
                 />
@@ -92,9 +125,9 @@ const OneBeer = () => {
                   required
                   fullWidth
                   id="email"
-                  label="Correo"
-                  name="email"
-                  autoComplete="email"
+                  label="mezcla"
+                  name="mezcla"
+                  onChange={handleChange}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -102,19 +135,40 @@ const OneBeer = () => {
                   variant="outlined"
                   required
                   fullWidth
-                  name="password"
-                  label="Password"
-                  type="password"
+                  name="maridaje"
+                  label="Maridaje"
                   id="password"
-                  autoComplete="current-password"
+                  onChange={handleChange}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  variant="outlined"
+                  required
+                  fullWidth
+                  name="descripcion"
+                  label="Descripcion"
+                  id="descripcion"
+                  onChange={handleChange}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  variant="outlined"
+                  required
+                  fullWidth
+                  name="image"
+                  label="Imagen"
+                  id="image"
+                  onChange={handleChange}
                 />
               </Grid>
               <Grid item xs={12}>
                 <FormControlLabel
-                  control={
-                    <Checkbox value="allowExtraEmails" color="primary" />
-                  }
-                  label="Quiero recibir inspiración, sobre Desarrollo Web promociones y actualizaciones via email."
+                  control={<Checkbox color="primary" />}
+                  onChange={handleChange}
+                  name="probada"
+                  label="Ya la has probado"
                 />
               </Grid>
             </Grid>
@@ -125,15 +179,8 @@ const OneBeer = () => {
               color="primary"
               className={classes.submit}
             >
-              Sign Up
+              Enviar beer
             </Button>
-            <Grid container justify="flex-end">
-              <Grid item>
-                <Link href="#" variant="body2">
-                  Already have an account? Sign in
-                </Link>
-              </Grid>
-            </Grid>
           </form>
         </div>
         <Box mt={5}></Box>

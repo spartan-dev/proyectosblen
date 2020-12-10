@@ -10,9 +10,10 @@ const RandomBeer = () => {
     getRandom();
   }, []);
   const getRandom = async () => {
-    const call = await fetch("https://api.punkapi.com/v2/beers/random ");
+    const call = await fetch("http://localhost:4200/beers");
     const data = await call.json();
-    setRandom(data);
+    let random = Math.floor(Math.random() * data.length);
+    setRandom(data[random]);
   };
   console.log(random);
   return (
@@ -48,9 +49,10 @@ const RandomBeer = () => {
             <div>Loading...</div>
           ) : (
             <BeerCard
-              title={random[0].name}
-              description={random[0].description}
-              linktitle={random[0].first_brewed}
+              nombre={random.nombre}
+              descripcion={random.descripcion}
+              tipo={random.tipo}
+              id={random.id}
             />
           )}
         </div>

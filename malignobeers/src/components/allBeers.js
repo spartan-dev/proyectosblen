@@ -13,7 +13,7 @@ const AllBeers = () => {
   }, []);
 
   const getBeers = async () => {
-    const call = await fetch("https://api.punkapi.com/v2/beers ");
+    const call = await fetch("http://localhost:4200/beers");
     const data = await call.json();
     console.log(data);
     setBeers(data);
@@ -50,16 +50,7 @@ const AllBeers = () => {
           {beers === undefined ? (
             <div>Loading...</div>
           ) : (
-            beers.map((beer, idx) => (
-              <BeerCard
-                key={idx}
-                id={beer.id}
-                title={beer.name}
-                description={beer.description}
-                linktitle={beer.name}
-                image={beer.image_url}
-              />
-            ))
+            beers.map((beer, idx) => <BeerCard key={idx} {...beer} />)
           )}
         </div>
       </div>
