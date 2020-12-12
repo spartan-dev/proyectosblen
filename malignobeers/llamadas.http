@@ -1,0 +1,10 @@
+GET http://localhost:4200/beers
+###
+POST http://localhost:4200/beers
+###
+PUT http://localhost:4200/beers
+###
+DELETE http://localhost:4200/beers
+###
+
+GET http://localhost:4200/users

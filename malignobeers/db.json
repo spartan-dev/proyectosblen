@@ -11,16 +11,6 @@
       "id": 1
     },
     {
-      "nombre": "corona",
-      "tipo": "lager",
-      "mezcla": "ni idea",
-      "maridaje": "con lo que sea",
-      "descripcion": "una chela comun para comer",
-      "image": "https://bodegasalianza.vteximg.com.br/arquivos/ids/164044-800-800/30032-1.jpg?v=636582983081900000",
-      "probada": true,
-      "id": 2
-    },
-    {
       "nombre": "Jabali",
       "tipo": "stout",
       "mezcla": "lupulos y trigo",
@@ -29,6 +19,16 @@
       "image": "https://bodegasalianza.vteximg.com.br/arquivos/ids/164044-800-800/30032-1.jpg?v=636582983081900000",
       "probada": true,
       "id": 3
+    },
+    {
+      "nombre": "Minerva",
+      "tipo": "sotut",
+      "mezcla": "lupulo verde",
+      "maridaje": "con huaraches ",
+      "descripcion": "una cherla con chocolate dice carlos??? ",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/61Kr3E9yajL._AC_SX569_.jpg",
+      "probada": false,
+      "id": 4
     }
   ],
   "users": [

@@ -17,3 +17,30 @@ code {
   color: black;
   font-size: x-large;
 }
+.botonera {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2em;
+}
+.intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.ficha-tecnica {
+  width: 50%;
+}
+.maridaje {
+  padding: 2em;
+  display: flex;
+  justify-content: space-around;
+  align-self: center;
+  margin-right: 2em;
+  width: 50%;
+}
+.imagen-tecnica {
+  width: 50%;
+}
